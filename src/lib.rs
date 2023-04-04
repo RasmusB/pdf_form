@@ -476,8 +476,8 @@ impl Form {
             .iter()
             .map(|object| {
                 object
-                    .as_f64()
-                    .unwrap_or(object.as_i64().unwrap_or(0) as f64) as f32
+                    .as_i64()
+                    .unwrap() as f32
             })
             .collect::<Vec<_>>();
 
